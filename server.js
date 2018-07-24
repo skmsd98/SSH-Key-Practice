@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 
+const port = process.env.PORT || 3000;
 var app = express();
 
 app.set('view engine', 'hbs');
@@ -48,6 +49,6 @@ app.get('/other', (req, res) => {
         footer: 'Copyright 2016'
     });
 })
-app.listen(8080, () => {
-    console.log("Server is running at http://localhost:8080");
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}`);
 });
