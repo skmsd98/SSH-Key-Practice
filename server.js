@@ -10,7 +10,7 @@ hbs.registerHelper('getCurrentYear', (blah) => (blah + new Date().getFullYear())
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-    res.send('<h1>Welcome to Home page!</h1>');
+    res.render('home.hbs');
 });
 
 app.get('/json', (req, res) => {
